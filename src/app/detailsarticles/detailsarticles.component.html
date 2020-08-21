@@ -1,0 +1,17 @@
+<div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col text-center mt-3 mb-3" *ngFor="let x of postrecord">
+            <div class="card">
+                <img src="{{ imagepath }}{{ x.img_name }}"class="card-img-top tab-img">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <p>{{ x.cat_name }}</p>
+                </h5>
+                <p class="card-text h3">{{ x.title }}</p>
+                <p class="card-text desc-height">{{ x.meta_desc }}</p>
+                <p [innerHTML]="x.summary"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

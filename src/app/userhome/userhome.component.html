@@ -1,0 +1,24 @@
+<div class="container pt-5 pb-5">
+  <div class="text-center mt-3 mb-3" *ngFor="let x of catrecords">
+    <div class="card my-5">
+      <div class="row px-0">
+        <div class="col-4 p-2">
+          <img src="{{ imagepath }}{{ x.img_name }}" class="w-75 img" />
+        </div>
+        <div class="col-8 border-left bg-light">
+          <div class="card-body">
+            <h5 class="card-title mt-3">
+              <p class="h3 text-danger">{{ x.name }}</p>
+            </h5>
+            <p class="card-text">{{ x.meta_desc }}</p>
+            <a
+              class="btn btn-md btn-primary"
+              [routerLink]="['/similararticles', x.name]"
+              >{{ x.name }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
